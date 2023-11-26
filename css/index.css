@@ -1,0 +1,220 @@
+
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext&display=swap');
+  /* This keeps child nodes hidden while the element loads */
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    width: 100%;
+    height: 100vh;
+    /* outline: 1px solid black; */
+    overflow: hidden;
+
+  }
+  .contenedor__menu{
+    width: 100%;
+    height: 100vh;
+    /* outline: 3px solid black; */
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedor__menu-titulo{
+    width: 100%;
+    height: 20vh;
+    /* outline: 3px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .contenedor__menu-titulo H1{
+    text-align: center;
+  letter-spacing: 0.10em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8vh;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 800;
+color: #ececee;
+    
+  }
+  
+.contenedor__menu-titulo H1::first-letter {
+  color: #ed1c5b;
+}
+  .contenedor__menu-modelos{
+    width: 100%;
+    height: 80vh;
+    /* outline: 3px solid green; */
+    display: flex;
+    flex-direction: row;
+  }
+  .contenedor__menu-modelosA{
+    width: 40%;
+    height: 90vh;
+    /* outline: 3px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+   
+  }
+  .contenedor__menu-modelosB{
+    width: 60%;
+    height: 90vh;
+    /* outline: 3px solid pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .slider {
+    width: 100%;
+    height: 50%;
+    z-index: 3;
+    /* outline: 3px solid pink; */
+  }
+  .slides {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+  }
+  #uno{
+    margin-top: 10px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+
+   
+    position: relative;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    z-index: 9;
+  }
+  button{
+   background-color: transparent;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    z-index: 15;
+    
+  }
+  
+  #uno img{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+    object-fit: contain;
+    transform: scale(1.6);
+    -webkit-transition: -webkit-all 0.3s ease; /* Safari y Chrome */
+  -moz-transition: -moz-all 0.3s ease; /* Firefox */
+  -ms-transition: -ms-all 0.3s ease; /* IE 10 y 11 */
+  -o-transition: -o-all 0.3s ease; /* Opera */
+  transition: all 0.3s ease; 
+  
+    
+  }
+  :not(:defined) > * {
+    display: none;
+  }
+  .background{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    
+    z-index: -10;
+  }
+  .background img{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    object-fit: fill;
+  }
+  model-viewer {
+    background-color: transparent;
+    /* outline: 1px solid black; */
+    z-index: 2;
+    width: 100%;
+    height: 50%;
+    margin-bottom: 150px;
+    user-select: none;
+  }
+  
+  
+
+  @keyframes circle {
+    from { transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg); }
+    to   { transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg); }
+  }
+
+  @keyframes elongate {
+    from { transform: translateX(100px); }
+    to   { transform: translateX(-100px); }
+  }
+
+  model-viewer > #ar-prompt {
+    position: absolute;
+    
+    bottom: 175px;
+    animation: elongate 2s infinite ease-in-out alternate;
+    display: none;
+  }
+
+  model-viewer[ar-status="session-started"] > #ar-prompt {
+    display: block;
+  }
+
+  model-viewer > #ar-prompt > img {
+    animation: circle 4s linear infinite;
+  }
+
+  model-viewer > #ar-failure {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 175px;
+    display: none;
+  }
+
+  model-viewer[ar-tracking="not-tracking"] > #ar-failure {
+    display: block;
+  }
+
+  
+
+  
+  
+
+  #uno .selected {
+    transform: scale(1.9);
+
+    filter: drop-shadow(1px 12px 12px #000000);
+    }
+
+
+  .slide:focus {
+    outline: none;
+  }
+
+  .slide:focus-visible {
+    outline: 1px solid #4285f4;
+  }
+
+
+   
