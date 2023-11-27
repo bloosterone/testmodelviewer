@@ -1,0 +1,56 @@
+.contenedor_repisas{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.repisas123{
+    width: 66%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    outline: 2px solid var(--estructura);
+    margin-bottom:20vh;
+    max-height: 555px;
+    
+}
+.repisa2{
+    width: 33%;
+    height: 100%;
+    outline: 2px solid var(--estructura_hijo);
+    
+    display: flex;
+    flex-direction: row;
+}
+.repisa1, .repisa3{
+    width: 33%;
+    height: 100%;
+    outline: 2px solid var(--estructura_hijo);
+    
+    display: flex;
+    flex-direction: row;
+    
+}
+.repisa1_A, .repisa1_B{
+    width: 50%;
+    height: 100%;
+    outline: 2px dashed var(--estructura_hijo-subhijo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.grid_item{
+    /* outline: 1px solid black; */
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
