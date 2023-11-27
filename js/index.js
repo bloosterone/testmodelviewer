@@ -1,27 +1,14 @@
-
-        const modelViewer = document.querySelector("model-viewer");
-      
-        window.switchSrc = (element, name) => {
-      const base = "../assets/" + name;
-      console.log(base);
-      modelViewer.src = base + '.glb';
-      modelViewer.poster = base + '.webp';
-
-      const slides = document.querySelectorAll(".slide");
-      
-
-      // Remueve la clase "selected" de todas las imágenes
-      slides.forEach((img) => {
-        img.classList.remove("selected");
-      });
-
-      // Agrega la clase "selected" a la imagen seleccionada
-      
-      element.nextElementSibling.classList.add("selected");
-    };
-      
-        document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
-          // Keep slider interactions from affecting the XR scene.
-          ev.preventDefault();
-        });
-      
+const typed = new Typed('#typed', {
+    stringsElement: '#test',// ID del elemento que contiene cadenas de texto a mostrar.
+	typeSpeed: 30, // Velocidad en mlisegundos para poner una letra,
+	startDelay: 1, // Tiempo de retraso en iniciar la animacion. Aplica tambien cuando termina y vuelve a iniciar,
+	backSpeed: 20, // Velocidad en milisegundos para borrrar una letra,
+	smartBackspace: true, // Eliminar solamente las palabras que sean nuevas en una cadena de texto.
+	shuffle: false, // Alterar el orden en el que escribe las palabras.
+	backDelay: 1500, // Tiempo de espera despues de que termina de escribir una palabra.
+	loop: true, // Repetir el array de strings
+	loopCount: 5, // Cantidad de veces a repetir el array.  false = infinite
+	showCursor: true, // Mostrar cursor palpitanto
+	cursorChar: '|', // Caracter para el cursor
+	contentType: 'html', // 'html' o 'null' para texto sin formato
+  });
