@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/modelos.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/inicio.css">
     <link rel="stylesheet" href="/css/repisas.css">
@@ -16,16 +16,17 @@
 </head>
 <body>
   <div class="background">
-    <img src="img/fondo.webp" alt="">
+    <!-- <img src="img/fondo.webp" alt=""> -->
+    <div class="overlay"></div>
   </div>
-  <header>
+  <header >
     <nav>
       <div class="nav_title"><img src="img/logo.webp" alt="logo plunderlings"></div>
       
     </nav>
   </header>
   <main>
-    <section class="inicio">
+    <section class="inicio" id="section1" >
       <div class="inicio_text">
         <div class="contenedor_letras">
           <div class="contenedor-titulo__sub">
@@ -41,29 +42,31 @@
       
 
     </section>
-    <div class="inicio_menu">
+    <div class="inicio_menu" id="miElemento">
       <div class="menu menu--alonso">
-        <ul class="menu__list">
-          <li class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Characters</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Faq</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
-          <li class="menu__line"></li>
-        </ul>
+        <div class="menu__list" id="menu__list">
+          <div class="menu__list-A"><div id="btn1" class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></div>
+          <div id="btn2" class="menu__item"><a href="#" class="menu__link">Presentation</a></div>
+          <div id="btn3" class="menu__item"><a href="#" class="menu__link">Character</a></div>
+          <div id="btn4" class="menu__item"><a href="#" class="menu__link">Faq</a></div>
+          <div id="btn5" class="menu__item"><a href="#" class="menu__link">Contact</a></div>
+          </div>
+          <div class="menu__list-B"><div class="menu__line" id="menu__line"></div></div>
+          
+        </div>
       </div>
     </div>
-    <div class="div_vacio"></div>
-    <section>
+    <div class="div_vacio" id="div_vacio"></div>
+    <section id="section2">
       <div class="contenedor__menu">
         <div class="background2">
-          <img src="img/pirata.jpg" alt="">
+          <img src="img/testpirata.png" alt="">
         </div>
   
         <div class="contenedor__menu-titulo">
-            <h1>PLAYER SELECT</h1>
+            <h1>Presentation</h1>
         </div>
-        <div class="contenedor__menu-modelos">
+        <div class="contenedor__menu-modelos" >
           <div class="contenedor__menu-modelosA">
             <model-viewer src="/assets/ironman.glb" poster="/assets/ironman.webp" shadow-intensity="1" camera-controls auto-rotate loading="lazy" alt="A 3D model carousel"></model-viewer>
           </div>
@@ -90,30 +93,20 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="section3">
       <div class="contenedor_repisas">
         <div class="background3">
-          <img src="img/muralla_copy.jpg" alt="">
+          <img src="img/testmuralla_copy.png" alt="">
         </div>
-        <div class="contenedor__menu-titulo">
-          <h1>PLAYER SELECT</h1>
-        </div>
+       
       <div class="repisas123">
 
         
         <div class="repisa1">
           <div class="repisa1_A">
             <div class="grid_item">
-              <!-- <div class="slider">
-                <div class="slides"> -->
-                 1
-                  
-                  
-                  
-                <!-- </div>
-              </div> -->
+              1
             </div>
-          
             <div class="grid_item">
               2
             </div>
@@ -146,7 +139,7 @@
           
         </div>
         <div class="repisa2">
-          <div class="repisa1_A">
+          <div class="repisa2_A">
             <div class="grid_item">
               <div id="uno">
                <button  onclick="switchSrc(this, 'hulk')" ></button>
@@ -172,7 +165,7 @@
               
             </div>
           </div>
-          <div class="repisa1_B">
+          <div class="repisa2_B">
            
             <div class="grid_item">
               <div id="uno">
@@ -197,7 +190,7 @@
           </div>
         </div>
         <div class="repisa3">
-          <div class="repisa1_A">
+          <div class="repisa3_A">
             <div class="grid_item">
               <div id="uno">
                 <button onclick="switchSrc(this, 'king_kong')"></button>
@@ -213,7 +206,7 @@
             <div class="grid_item">3</div>
             <div class="grid_item">4</div>
           </div>
-          <div class="repisa1_B">
+          <div class="repisa3_B">
             <div class="grid_item">5</div>
             <div class="grid_item">6</div>
             <div class="grid_item">
@@ -226,12 +219,17 @@
           </div>
         </div>
       </div>
+
+      <div class="contenedor__character-titulo">
+        <h1>CHARACTER SELECT</h1>
+      </div>
+
       </div>
       
     </section>
-    <section></section>
-    <section></section>
-    <section></section>
+    <section id="section4"></section>
+    <section id="section5"></section>
+    <section id="section6"></section>
   </main>
     
     
