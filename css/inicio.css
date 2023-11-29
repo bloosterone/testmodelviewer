@@ -235,8 +235,8 @@
     background-size: cover;
     position: fixed;
     position: -webkit-fixed;
-    background-attachment: fixed;
-    min-height: 120vh;
+    
+    min-height: 125vh;
     z-index: -10;
   }
   /* .background img{
