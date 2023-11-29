@@ -219,6 +219,7 @@
 	/* border: 1px solid #fff; */
 	border-width: 0 45px;
 	background: #ed1c5b;
+	transition: left .3s ease-in-out;
 	/* -webkit-transition: -webkit-transform 0.2s;
 	transition: transform 0.2s;
 	-webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1);
