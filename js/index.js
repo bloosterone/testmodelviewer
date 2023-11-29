@@ -90,10 +90,42 @@ const elementoObjetivo = document.getElementById('miElemento');
 const menulist = document.getElementById('menu__list');
 const menuLine = document.getElementById('menu__line');
 const div_vacio = document.getElementById('div_vacio');
+
+
+
+
+function obtenerAnchoElemento() {
+	// Reemplaza 'tuElemento' con el ID o selector del elemento que deseas medir
+	let elemento = menuLine;
+  
+	// Verificar si el elemento existe
+	if (elemento) {
+	  // Obtener el ancho del elemento
+	  let ancho = elemento.offsetWidth;
+  
+	  // Puedes realizar otras acciones aquí si es necesario
+  
+	  // Retornar el ancho del elemento
+	  return ancho;
+	} else {
+	  console.error('Elemento no encontrado.');
+	  return null;
+	}
+  }
+function manejarCambioDeTamaño() {
+	// Obtener el ancho del elemento
+	let anchoElemento = obtenerAnchoElemento();
+  
+	// Hacer algo con el ancho (puedes imprimirlo en la consola por ahora)
+	console.log('Ancho del elemento:', anchoElemento);
+  }
+window.addEventListener('resize', manejarCambioDeTamaño);
+
+
 // Agrega un listener al evento de desplazamiento
 window.addEventListener('scroll', function() {
     // Obtiene la posición actual de desplazamiento
-
+	let dentroAnchoElemento = obtenerAnchoElemento();
 	window.requestAnimationFrame(function() {
         
 		const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -108,13 +140,26 @@ window.addEventListener('scroll', function() {
 		
 		return colisiona;
 	}
+
+	
 	//inicia la consulta section 1
 	if (detectarColision(div_vacio)) {
 		
 		
-		menuLine.style = 'transform: translate3d(0, 0, 0)';
-		menuLine.style = '-webkit-transform: translate3d(0, 0, 0)';
-		// -webkit-transform: translate3d(0, 0, 0);
+		if(dentroAnchoElemento >=40){
+			
+			let primero= dentroAnchoElemento - 35;
+			
+			menuLine.style.left = `${primero}%`;
+			
+			
+			
+			}
+			else{
+				primero= dentroAnchoElemento - 15;
+			
+				menuLine.style.left = `${primero}%`;
+			}
 		
 	  }
 	  else{
@@ -123,9 +168,23 @@ window.addEventListener('scroll', function() {
 	//inicia la consulta section 2
 	if (detectarColision(section2)) {
 		
+		if(dentroAnchoElemento >=40){
+			
+			let segundo= dentroAnchoElemento * .7;
+			
+			menuLine.style.left = `${segundo}%`;
+			
+			
+			
+			}
+			else{
+				segundo= dentroAnchoElemento + 8;
+			
+				menuLine.style.left = `${segundo}%`;
+			}
 		
-		menuLine.style = 'transform: translate3d(300%, 0, 0)';
-		menuLine.style = '-webkit-transform: translate3d(300%, 0, 0)';
+		
+		
 		
 		
 	  }
@@ -134,10 +193,20 @@ window.addEventListener('scroll', function() {
 	  }
 	  //inicia la consulta section 3
 	if (detectarColision(section3)) {
-		
-		
-		menuLine.style = 'transform: translate3d(600%, 0, 0)';
-		menuLine.style = '-webkit-transform: translate3d(600%, 0, 0)';
+		if(dentroAnchoElemento >=40){
+			
+			let tercero= dentroAnchoElemento * 1.3;
+			
+			menuLine.style.left = `${tercero}%`;
+			
+			
+			
+			}
+			else{
+				tercero= dentroAnchoElemento * 2.7;
+			
+				menuLine.style.left = `${tercero}%`;
+			}
 		
 		
 	  }
@@ -148,21 +217,40 @@ window.addEventListener('scroll', function() {
 	if (detectarColision(section4)) {
 		
 		
-		menuLine.style = 'transform: translate3d(900%, 0, 0)';
-		menuLine.style = '-webkit-transform: translate3d(900%, 0, 0)';
-		
-		
+		if(dentroAnchoElemento >=40){
+			
+			let cuarto= dentroAnchoElemento * 1.74;
+			
+			menuLine.style.left = `${cuarto}%`;
+			
+			
+			
+			}
+			else{
+				cuarto= dentroAnchoElemento * 3.55;
+			
+				menuLine.style.left = `${cuarto}%`;
+			}
 	  }
 	  else{
 		
 	  }
 	  //inicia la consulta section 2
 	if (detectarColision(section5)) {
-		
-		
-		menuLine.style = 'transform: translate3d(1200%, 0, 0)';
-		menuLine.style = '-webkit-transform: translate3d(1200%, 0, 0)';
-		
+		if(dentroAnchoElemento >=40){
+			
+			let quinto= dentroAnchoElemento * 2.18;
+			
+			menuLine.style.left = `${quinto}%`;
+			
+			
+			
+			}
+			else{
+				quinto= dentroAnchoElemento * 4.4;
+			
+				menuLine.style.left = `${quinto}%`;
+			}
 		
 	  }
 	  else{

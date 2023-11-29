@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    height: 20%;
+    height: 20vh;
     position: relative;
     outline: 3px solid var(--estructura);
     z-index: 100;

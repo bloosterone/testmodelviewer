@@ -20,8 +20,8 @@
       element.nextElementSibling.classList.add("selected");
     };
       
-        document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
-          // Keep slider interactions from affecting the XR scene.
-          ev.preventDefault();
-        });
+        // document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
+        //   // Keep slider interactions from affecting the XR scene.
+        //   ev.preventDefault();
+        // });
       
